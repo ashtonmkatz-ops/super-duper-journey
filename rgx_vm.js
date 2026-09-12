@@ -2149,7 +2149,7 @@ document.addEventListener("keyup", function(e) {
 let audioID = 1;
 async function InitAudio() {
     audioContext = new AudioContext,
-    await audioContext.audioWorklet.addModule("rgx_audio.js"),
+    await audioContext.audioWorklet.addModule("https://fastly.jsdelivr.net/gh/ashtonmkatz-ops/super-duper-journey@main/rgx_audio.js"),
     (audioNode = new AudioWorkletNode(audioContext, "RGX Audio Processor")).connect(audioContext.destination),
     audioNode.port.onmessage = HandleAudioMessage;
     let e = audioContext.sampleRate;
