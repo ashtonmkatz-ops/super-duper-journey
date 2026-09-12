@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="content-language" content="en-us">
-	<title>Icy Escort - Play FREE in your browser</title>
-	<meta name="description" content="Embark on a frosty platform adventure with Mother Penguin! Trot across the icy continent, overcoming obstacles and reuniting with her lost baby penguins. Experience heartwarming fun in a chilly world!" />
-	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ashtonmkatz-ops/super-duper-journey@main/styles.css">
-	<script src="https://fastly.jsdelivr.net/gh/ashtonmkatz-ops/super-duper-journey@main/IcyEscort.js"></script>
-	<script src="https://fastly.jsdelivr.net/gh/ashtonmkatz-ops/super-duper-journey@main/touch.js"></script>
-	<script src="https://fastly.jsdelivr.net/gh/ashtonmkatz-ops/super-duper-journey@main/rgx_vm.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="en-us">
+    <title>Icy Escort - Play FREE in your browser</title>
+
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ashtonmkatz-ops/super-duper-journey@main/styles.css">
+
+    <!-- Correct load order -->
+    <script src="https://fastly.jsdelivr.net/gh/ashtonmkatz-ops/super-duper-journey@main/rgx_vm.js"></script>
+    <script src="https://fastly.jsdelivr.net/gh/ashtonmkatz-ops/super-duper-journey@main/IcyEscort.js"></script>
+    <script src="https://fastly.jsdelivr.net/gh/ashtonmkatz-ops/super-duper-journey@main/touch.js"></script>
 </head>
-<body onload="Init( 'https://fastly.jsdelivr.net/gh/ashtonmkatz-ops/super-duper-journey@main/IcyEscort.png' )">
-	<div id="dpadVoid"></div>
-	<div id="dpadCross"></div>
-	<div id="dpadA"></div>
-	<div class="gameTitle">Icy Escort</div>
-	<div class="titleSpacing"></div>
-	<div>
-		<canvas id="mainCanvas" width="960" height="600"</canvas>
-	</div>
-	<div class="keySpacing"></div>	
+
+<body onload="Init('data:image/png;base64,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')">
+
+    <div id="dpadVoid"></div>
+    <div id="dpadCross"></div>
+    <div id="dpadA"></div>
+    <div id="dpadB"></div>
+    <div id="dpadC"></div>
+
+    <div class="gameTitle">Icy Escort</div>
+    <div class="titleSpacing"></div>
+
+    <canvas id="mainCanvas" width="960" height="600"></canvas>
+
+    <div class="keySpacing"></div>
 </body>
 </html>
