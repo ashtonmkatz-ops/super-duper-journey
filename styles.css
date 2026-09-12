@@ -1,0 +1,196 @@
+body {
+	font-family: Arial;
+	background: black;
+	margin: auto;
+	text-align: center;
+	color: white;
+	font-size: 32px;
+}
+h1 {
+	font-family: Arial;
+	font-size: 38px;
+	font-weight: normal;
+	margin: auto;
+}
+a:link, a:visited {
+	color: white;
+	text-decoration: none;
+}
+canvas {
+	width: 100%;
+	height: auto;
+}
+.header {
+	display: block;
+	height: 50px;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+.gameHeader {
+	display: block;
+	height: 50px;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+.gameTitle {
+	font-size: 32px;
+}
+.titleSpacing {
+	height: 16px;
+}
+.logo {
+	display: block;
+	margin: auto;
+	max-width: 50%;
+}
+.screen64 {
+	display: flex;
+	justify-content: center;
+	gap: 5%;
+}
+.dlButton {
+	display: inline-block;
+	padding: 8px 12px;
+	background-color: #3498db;
+	color: white;
+	text-decoration: none;
+	border-radius: 6px;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+ }
+
+.dlButton:hover {
+background-color: #2176bd;
+}
+
+.nullButton {
+	display: inline-block;
+	padding: 8px 12px;
+	background-color: #3498db;
+	color: white;
+	text-decoration: none;
+	border-radius: 6px;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+ }
+
+.iconS {
+	float: left;
+	width: 33%;
+	margin: auto;
+	text-align: center;
+	font-size: 27px;
+}
+.textF {
+	display: block;
+	margin: auto;
+	max-width: 85%;
+}
+.keySpacing {
+	height: 24px;
+}
+.keyInfo {
+	display: block;
+	margin: auto;
+}
+#dpadVoid {
+	position: fixed;
+	display: none;
+	touch-action: none;
+	top: 46%;
+	left: 0%;
+	width: 100%;
+	height: 54%;
+	/*background-color: rgba(0,255,0,0.25);*/
+	z-index: 2;
+}
+#dpadCross {
+	position: fixed;
+	display: none;
+	touch-action: none;
+	top: 50%;
+	left: -5%;
+	width: 48%;
+	height: 30%;
+	/*background-color: rgba(0,255,0,0.25);*/
+	background-image: url("dpadL.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 3;
+}
+#dpadA {
+	position: fixed;
+	display: none;
+	touch-action: none;
+	top: 57%;
+	left: 66%;
+	width: 30%;
+	height: 15%;
+	/*background-color: rgba(0,255,0,0.25);*/
+	background-image: url("dpadR.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 3;
+}
+#dpadB {
+	position: fixed;
+	display: none;
+	touch-action: none;
+	top: 75%;
+	left: 38%;
+	width: 25%;
+	height: 15%;
+	/*background-color: rgba(0,255,0,0.25);*/
+	background-image: url("dpadR.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 3;
+}
+#dpadC {
+	position: fixed;
+	display: none;
+	touch-action: none;
+	top: 75%;
+	left: 66%;
+	width: 30%;
+	height: 15%;
+	/*background-color: rgba(0,255,0,0.25);*/
+	background-image: url("dpadR.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 3;
+}
+@media screen and (max-width: 656px) {
+	.iconS { width: 100% }
+}
+@media screen and (min-width: 984px) {
+	body { max-width: 960px; font-size: 15px; }
+	h1 { font-size: 20px; }
+	.header { padding-top: 4%; padding-bottom: 1%; }
+	.gameHeader { padding-top: 4%; padding-bottom: 1%; }
+	.gameTitle { font-size: 20px; }
+	.iconS { width: 16.62%; font-size: 13px; }
+	.logo { max-width: 282px; }
+}
+@media (hover: none) and (pointer: coarse) {
+	body { user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+	.keyInfo { display: none; }
+	.keySpacing { height: 0; }
+	#dpadCross { display: block }
+	#dpadA { display: block }
+	#dpadB { display: block }
+	#dpadC { display: block }
+}
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+	.gameHeader { display: none }
+	.gameTitle { display: none }
+	.titleSpacing { height: 2vh; }
+	canvas { width: auto; height: 98vh; }
+	#dpadCross { top: 45%; left: -2%; width: 20%; height: 75%; background-size: 60%; }
+	#dpadA { top: 68%; left: 83%; width: 17%; height: 28%; background-size: 70%; }
+	#dpadB { top: 40%; left: 83%; width: 17%; height: 28%; background-size: 70%; }
+	#dpadC { top: 68%; left: 65%; width: 17%; height: 28%; background-size: 70%; }
+}
+@media (orientation: portrait) {
+	#dpadVoid { display: block }
+}
